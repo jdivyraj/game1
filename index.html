@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scavanger Hunt</title>
+<style>
+img{
+width : 350px;
+border :  5px solid;
+}
+</style>
+</head>
+<body>
+<center>
+<h2> Solve  & Get Clue</h2>
+<img src="C:\Users\LenovoThink\Desktop\puzzle\IMG-20240719-WA0009.jpg" alt="puzzle">
+<form id="answerForm">
+    <label for="answerInput">Enter your answer:</label>
+    <input type="text" id="answerInput" name="answerInput">
+    <button type="submit">Submit</button>
+</form>
+
+<p id="result"></p>
+
+<script>
+     document.getElementById("answerForm").addEventListener("submit", function(event) {
+        event.preventDefault();        
+        let userAnswer = document.getElementById("answerInput").value.trim().toLowerCase();
+
+        if (userAnswer == "suresh raina") { 
+            document.getElementById("result").textContent = "Move to lecture number 3";
+        } else {
+            document.getElementById("result").textContent = "Retry";
+        }
+
+               document.getElementById("answerInput").value = "";
+    });
+</script>
+</center>
+</body>
+</html>
